@@ -8,18 +8,25 @@
 
 import UIKit
 
+protocol LoginPresenterProtocol {
+    func login(username: String, password: String)
+}
+
 class LoginViewController: UIViewController {
     
-    // Outlets
+    // OUTLETS
     @IBOutlet weak var nombreUsuarioLabel: UITextField?
     @IBOutlet weak var passwordLabel: UITextField?
     @IBOutlet weak var iniciarSesionButton: UIButton?
     
-    // Repositories
-    let repository = AuthRepository()
+    // PRESENTERS
+    var presenter : LoginPresenterProtocol?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //presenter = LoginPresenter(view: self)
         
         nombreUsuarioLabel?.layer.cornerRadius = 8
         passwordLabel?.layer.cornerRadius = 8
@@ -27,18 +34,23 @@ class LoginViewController: UIViewController {
         
     }
     
-    //Actions
+    //ACTIONS
     @IBAction func inisioSesionAction(_ sender: Any) {
         if let username = nombreUsuarioLabel?.text, let password = passwordLabel?.text {
-            repository.login(username: username, password: password, completion: {user in
-                print(user?.name)
-                print(user?.token)
-            })
+            presenter?.login(username: username, password: password)
         }
+    }
+}
+
+extension LoginViewController : LoginViewControllerProtocol {
+    
+    func showError(message: String) {
         
     }
     
-
-
+    func showLoginSuccess() {
+        
+    }
+    
 }
 

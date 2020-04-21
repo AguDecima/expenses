@@ -23,6 +23,9 @@
 		37C30278244A1AEE00567703 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C30277244A1AEE00567703 /* LoginResponse.swift */; };
 		37C3027A244A1AFE00567703 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C30279244A1AFE00567703 /* User.swift */; };
 		37C3027C244A258900567703 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3027B244A258900567703 /* AuthRepository.swift */; };
+		37E6EB7A244E3907004D6C1B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6EB79244E3907004D6C1B /* LoginPresenter.swift */; };
+		37E6EB7C244E4108004D6C1B /* LoginWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6EB7B244E4108004D6C1B /* LoginWireFrame.swift */; };
+		37E6EB80244E7536004D6C1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E6EB7F244E7536004D6C1B /* MainViewController.swift */; };
 		77978A26169714C582E321AB /* Pods_expenses.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D42B2E18E4C178E084D187 /* Pods_expenses.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,9 @@
 		37C30277244A1AEE00567703 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		37C30279244A1AFE00567703 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		37C3027B244A258900567703 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		37E6EB79244E3907004D6C1B /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		37E6EB7B244E4108004D6C1B /* LoginWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireFrame.swift; sourceTree = "<group>"; };
+		37E6EB7F244E7536004D6C1B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		90D42B2E18E4C178E084D187 /* Pods_expenses.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_expenses.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +97,8 @@
 		376952BA2447D319006D7AE5 /* expenses */ = {
 			isa = PBXGroup;
 			children = (
+				37E6EB78244E3875004D6C1B /* Wireframe */,
+				37E6EB77244E3862004D6C1B /* Presenters */,
 				37C30272244A1ABB00567703 /* Repositories */,
 				37C30271244A1AB600567703 /* Model */,
 				37C30265244A18E000567703 /* Network */,
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				376952BF2447D319006D7AE5 /* LoginViewController.swift */,
+				37E6EB7F244E7536004D6C1B /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +175,22 @@
 				37C3027B244A258900567703 /* AuthRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		37E6EB77244E3862004D6C1B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				37E6EB79244E3907004D6C1B /* LoginPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		37E6EB78244E3875004D6C1B /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				37E6EB7B244E4108004D6C1B /* LoginWireFrame.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		F74EBC43BD8605031644446A /* Pods */ = {
@@ -294,9 +319,12 @@
 			files = (
 				37C3026A244A196B00567703 /* ErrorResponse.swift in Sources */,
 				37C3026E244A19C200567703 /* BaseRepository.swift in Sources */,
+				37E6EB7A244E3907004D6C1B /* LoginPresenter.swift in Sources */,
 				376952C02447D319006D7AE5 /* LoginViewController.swift in Sources */,
+				37E6EB7C244E4108004D6C1B /* LoginWireFrame.swift in Sources */,
 				37C30274244A1AD200567703 /* ApiRequestBuilder.swift in Sources */,
 				37C30276244A1AE000567703 /* ApiUrls.swift in Sources */,
+				37E6EB80244E7536004D6C1B /* MainViewController.swift in Sources */,
 				376952BC2447D319006D7AE5 /* AppDelegate.swift in Sources */,
 				376952BE2447D319006D7AE5 /* SceneDelegate.swift in Sources */,
 				37C3026C244A199300567703 /* NetworkRequestManager.swift in Sources */,

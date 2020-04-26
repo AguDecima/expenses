@@ -19,7 +19,7 @@ class LoginWireframe {
         let loginPresenter = LoginPresenter(view: loginVC)
         loginVC.presenter = loginPresenter
         
-        context.navigationController?.pushViewController(loginVC, animated: true)
+        context.navigationController?.setViewControllers([loginVC], animated: true)
     }
     
 }

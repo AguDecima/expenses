@@ -13,11 +13,18 @@ import AlamofireObjectMapper
 
 class AuthRepository: BaseRepository {
     
-    func login(username: String, password: String, completion: @escaping (User?) -> Void) {
+    func login(username: String, password: String, completion: @escaping (User?, String?) -> Void) {
         
         requestBuilder.login(username: username, password: password).responseObject { (dataResponse: DataResponse<LoginResponse>) in
-            let user: User? = dataResponse.value?.user
-            completion(user)
+            
+            switch dataResponse.result {
+                case .success:
+                    let user: User? = dataResponse.value?.user;
+                    completion(user,nil)
+                case .failure:
+                    completion(nil,self.getError(from: dataResponse))
+            }
+            
         }
     }
 }

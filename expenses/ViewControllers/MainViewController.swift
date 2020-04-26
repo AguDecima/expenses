@@ -16,7 +16,7 @@ class MainViewController : UIViewController {
        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        LoginWireframe.navigateToLogin(from: self)
+        MainWireFrame.navigationToLoginOrHome(from: self)
     }
        
     override func viewDidAppear(_ animated: Bool) {

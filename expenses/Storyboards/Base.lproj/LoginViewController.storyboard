@@ -10,8 +10,9 @@
         <!--Navigation Controller-->
         <scene sceneID="TbA-f8-kko">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="c8g-sr-CIM" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="c8g-sr-CIM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wbw-Om-Wiw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -104,6 +105,7 @@
                             <constraint firstItem="h7N-JO-4tk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="I5d-tK-UXe"/>
                             <constraint firstItem="7di-3f-9rW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="NFP-mh-B3w"/>
                             <constraint firstItem="7di-3f-9rW" firstAttribute="top" secondItem="7S4-c5-fct" secondAttribute="bottom" constant="48" id="NKZ-5X-jA4"/>
+                            <constraint firstItem="h7N-JO-4tk" firstAttribute="top" secondItem="I1S-jv-s8P" secondAttribute="bottom" constant="39" id="RmN-Mx-W7F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sG1-2o-Elb" secondAttribute="bottom" id="Uey-gf-47c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7S4-c5-fct" secondAttribute="trailing" constant="111" id="Wqp-Ga-DsD"/>
                             <constraint firstItem="72Z-hu-isi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bVt-Y5-u0t"/>

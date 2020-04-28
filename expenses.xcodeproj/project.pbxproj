@@ -30,6 +30,10 @@
 		376952C52447D31B006D7AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376952C42447D31B006D7AE5 /* Assets.xcassets */; };
 		376952C82447D31B006D7AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376952C62447D31B006D7AE5 /* LaunchScreen.storyboard */; };
 		379D09142457EF61008EDBA5 /* NewExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */; };
+		379D09162457FDB7008EDBA5 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */; };
+		379D09182457FE0E008EDBA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D09172457FE0E008EDBA5 /* HomeViewController.swift */; };
+		379D091A2457FEF3008EDBA5 /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D09192457FEF3008EDBA5 /* HomeWireFrame.swift */; };
+		379D091C2458002A008EDBA5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D091B2458002A008EDBA5 /* HomePresenter.swift */; };
 		37A7431824549ED4000AEE98 /* SelectorWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7431724549ED4000AEE98 /* SelectorWireFrame.swift */; };
 		37A7431A2454A09B000AEE98 /* AccountSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A743192454A09A000AEE98 /* AccountSelectorPresenter.swift */; };
 		37A7431C2454A1B8000AEE98 /* CategorySelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */; };
@@ -78,6 +82,10 @@
 		376952C72447D31B006D7AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376952C92447D31B006D7AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewExpenseViewController.storyboard; sourceTree = "<group>"; };
+		379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		379D09172457FE0E008EDBA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		379D09192457FEF3008EDBA5 /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
+		379D091B2458002A008EDBA5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		37A7431724549ED4000AEE98 /* SelectorWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorWireFrame.swift; sourceTree = "<group>"; };
 		37A743192454A09A000AEE98 /* AccountSelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectorPresenter.swift; sourceTree = "<group>"; };
 		37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorPresenter.swift; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 				379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */,
 				376952C12447D319006D7AE5 /* LoginViewController.storyboard */,
 				371C8AD024549DE30039329A /* SelectorViewController.storyboard */,
+				379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 				37E6EB7F244E7536004D6C1B /* MainViewController.swift */,
 				370938FF24512C47001942C0 /* NewExpenseViewController.swift */,
 				371C8AD224549E000039329A /* SelectorViewController.swift */,
+				379D09172457FE0E008EDBA5 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +267,7 @@
 				37A743192454A09A000AEE98 /* AccountSelectorPresenter.swift */,
 				37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */,
 				37A7431D2454A1C9000AEE98 /* ProviderSelectorPresenter.swift */,
+				379D091B2458002A008EDBA5 /* HomePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -268,6 +279,7 @@
 				3709390124512EA5001942C0 /* MainWireFrame.swift */,
 				3709390324512ED0001942C0 /* NewExpenseWireFrame.swift */,
 				37A7431724549ED4000AEE98 /* SelectorWireFrame.swift */,
+				379D09192457FEF3008EDBA5 /* HomeWireFrame.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -343,6 +355,7 @@
 			files = (
 				371C8AD124549DE30039329A /* SelectorViewController.storyboard in Resources */,
 				376952C82447D31B006D7AE5 /* LaunchScreen.storyboard in Resources */,
+				379D09162457FDB7008EDBA5 /* HomeViewController.storyboard in Resources */,
 				371C8ACF24549DB10039329A /* SelectorTableViewCell.xib in Resources */,
 				376952C52447D31B006D7AE5 /* Assets.xcassets in Resources */,
 				376952C32447D319006D7AE5 /* LoginViewController.storyboard in Resources */,
@@ -404,6 +417,7 @@
 				37C3026E244A19C200567703 /* BaseRepository.swift in Sources */,
 				37A7431824549ED4000AEE98 /* SelectorWireFrame.swift in Sources */,
 				37E6EB7A244E3907004D6C1B /* LoginPresenter.swift in Sources */,
+				379D09182457FE0E008EDBA5 /* HomeViewController.swift in Sources */,
 				376952C02447D319006D7AE5 /* LoginViewController.swift in Sources */,
 				371C8ACE24549DB10039329A /* SelectorTableViewCell.swift in Sources */,
 				371C8AD324549E000039329A /* SelectorViewController.swift in Sources */,
@@ -415,6 +429,7 @@
 				371C8AC32453CAE60039329A /* Provider.swift in Sources */,
 				37A7431E2454A1C9000AEE98 /* ProviderSelectorPresenter.swift in Sources */,
 				3709390624512FB7001942C0 /* SessionHelper.swift in Sources */,
+				379D091C2458002A008EDBA5 /* HomePresenter.swift in Sources */,
 				37C30274244A1AD200567703 /* ApiRequestBuilder.swift in Sources */,
 				37C30276244A1AE000567703 /* ApiUrls.swift in Sources */,
 				3709390024512C47001942C0 /* NewExpenseViewController.swift in Sources */,
@@ -423,6 +438,7 @@
 				371C8AC72453CEA60039329A /* CategoriesRepository.swift in Sources */,
 				371C8AC52453CBBA0039329A /* AccountRepository.swift in Sources */,
 				371C8ABF2453C88F0039329A /* Currency.swift in Sources */,
+				379D091A2457FEF3008EDBA5 /* HomeWireFrame.swift in Sources */,
 				37A7431A2454A09B000AEE98 /* AccountSelectorPresenter.swift in Sources */,
 				376952BE2447D319006D7AE5 /* SceneDelegate.swift in Sources */,
 				3709390424512ED0001942C0 /* NewExpenseWireFrame.swift in Sources */,

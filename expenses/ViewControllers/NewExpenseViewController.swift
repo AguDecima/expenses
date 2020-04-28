@@ -38,12 +38,6 @@ class NewExpenseViewController : UIViewController {
         setupUI()
     }
     
-    @objc private func closeSession() {
-        print("Cerrando Session")
-        SessionHelper().closeSession()
-        MainWireFrame.navigationToLoginOrHome(from: self)
-    }
-    
     @objc private func accountSelectorTapped() {
         presenter?.accountTapped()
     }
@@ -65,8 +59,6 @@ class NewExpenseViewController : UIViewController {
     }
     
     private func setupUI(){
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(closeSession))
         
         accountContainer?.layer.borderWidth = 1
         accountContainer?.layer.borderColor = UIColor.lightGray.cgColor

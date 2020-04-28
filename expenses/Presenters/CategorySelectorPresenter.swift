@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol CategorySelectorDelegate : class {
+    func categoryWasSelected(_ category: Category)
+}
+
 protocol CategorySelectorViewProtocol : class {
     func show(categories: [Category])
 }
@@ -19,6 +23,7 @@ class CategorySelectorPresenter {
     var categories: [Category] = []
     
     weak var view: CategorySelectorViewProtocol?
+    var delegate: CategorySelectorDelegate?
     
     init(view: CategorySelectorViewProtocol?) {
         self.view = view
@@ -38,6 +43,6 @@ extension CategorySelectorPresenter: SelectorPresenterProtocol {
     
     func elementSelected(at index: Int) {
         let selectedCategory = categories[index]
-        print(selectedCategory.name)
+        delegate?.categoryWasSelected(selectedCategory)
     }
 }

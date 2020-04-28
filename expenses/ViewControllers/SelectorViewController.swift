@@ -63,6 +63,7 @@ extension SelectorViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            let row = indexPath.row
            presenter?.elementSelected(at: row)
+           navigationController?.popViewController(animated: true)
        }
     
 }

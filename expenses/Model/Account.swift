@@ -13,17 +13,13 @@ class Account: Mappable {
     
     var id: Int?
     var name: String?
-    var currency : Currency?
+    var currency: Currency?
     
-    required init?(map: Map) {
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         currency <- map["currency"]
     }
-    
-    func mapping(map: Map) {
-        
-    }
-    
-    
 }

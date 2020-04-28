@@ -9,17 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class Currency {
+class Currency: Mappable {
+    
     var id: Int?
+    var name: String?
     var symbol: String?
     
-    init(){}
-    
     required init?(map: Map) {}
-      
+    
     func mapping(map: Map) {
         id <- map["id"]
+        name <- map["name"]
         symbol <- map["symbol"]
     }
-
 }
+

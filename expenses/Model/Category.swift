@@ -25,3 +25,4 @@ class Category: Mappable {
         description <- map["description"]
     }
 }
+

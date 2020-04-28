@@ -12,7 +12,6 @@
 		3709390424512ED0001942C0 /* NewExpenseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709390324512ED0001942C0 /* NewExpenseWireFrame.swift */; };
 		3709390624512FB7001942C0 /* SessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709390524512FB7001942C0 /* SessionHelper.swift */; };
 		37093908245134DC001942C0 /* NewExpensePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37093907245134DC001942C0 /* NewExpensePresenter.swift */; };
-		371C8ABB2453C0080039329A /* NewExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371C8ABA2453C0080039329A /* NewExpenseViewController.storyboard */; };
 		371C8ABD2453C7D70039329A /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8ABC2453C7D70039329A /* Account.swift */; };
 		371C8ABF2453C88F0039329A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8ABE2453C88F0039329A /* Currency.swift */; };
 		371C8AC12453C8FF0039329A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C8AC02453C8FF0039329A /* Category.swift */; };
@@ -30,6 +29,7 @@
 		376952C32447D319006D7AE5 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376952C12447D319006D7AE5 /* LoginViewController.storyboard */; };
 		376952C52447D31B006D7AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376952C42447D31B006D7AE5 /* Assets.xcassets */; };
 		376952C82447D31B006D7AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376952C62447D31B006D7AE5 /* LaunchScreen.storyboard */; };
+		379D09142457EF61008EDBA5 /* NewExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */; };
 		37A7431824549ED4000AEE98 /* SelectorWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7431724549ED4000AEE98 /* SelectorWireFrame.swift */; };
 		37A7431A2454A09B000AEE98 /* AccountSelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A743192454A09A000AEE98 /* AccountSelectorPresenter.swift */; };
 		37A7431C2454A1B8000AEE98 /* CategorySelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */; };
@@ -58,7 +58,6 @@
 		3709390324512ED0001942C0 /* NewExpenseWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseWireFrame.swift; sourceTree = "<group>"; };
 		3709390524512FB7001942C0 /* SessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHelper.swift; sourceTree = "<group>"; };
 		37093907245134DC001942C0 /* NewExpensePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpensePresenter.swift; sourceTree = "<group>"; };
-		371C8ABA2453C0080039329A /* NewExpenseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewExpenseViewController.storyboard; path = "../../../curso-ios-2020/Curso/Storyboards/NewExpenseViewController.storyboard"; sourceTree = "<group>"; };
 		371C8ABC2453C7D70039329A /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		371C8ABE2453C88F0039329A /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		371C8AC02453C8FF0039329A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		376952C42447D31B006D7AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376952C72447D31B006D7AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376952C92447D31B006D7AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewExpenseViewController.storyboard; sourceTree = "<group>"; };
 		37A7431724549ED4000AEE98 /* SelectorWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorWireFrame.swift; sourceTree = "<group>"; };
 		37A743192454A09A000AEE98 /* AccountSelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectorPresenter.swift; sourceTree = "<group>"; };
 		37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectorPresenter.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		376952CF2447D343006D7AE5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				371C8ABA2453C0080039329A /* NewExpenseViewController.storyboard */,
+				379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */,
 				376952C12447D319006D7AE5 /* LoginViewController.storyboard */,
 				371C8AD024549DE30039329A /* SelectorViewController.storyboard */,
 			);
@@ -346,7 +346,7 @@
 				371C8ACF24549DB10039329A /* SelectorTableViewCell.xib in Resources */,
 				376952C52447D31B006D7AE5 /* Assets.xcassets in Resources */,
 				376952C32447D319006D7AE5 /* LoginViewController.storyboard in Resources */,
-				371C8ABB2453C0080039329A /* NewExpenseViewController.storyboard in Resources */,
+				379D09142457EF61008EDBA5 /* NewExpenseViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@ protocol NewExpenseViewProtocol: class {
     func showSelected(account: Account)
     func showSelected(category: Category)
     func showSelected(provider: Provider)
+    func showSuccess(message: String?)
+    func showError(message: String?)
 }
 
 class NewExpensePresenter {
@@ -25,6 +27,11 @@ class NewExpensePresenter {
     var selectedAccount: Account?
     var selectedCategory: Category?
     var selectedProvider: Provider?
+    var amount: Double?
+    var quantity: Int?
+    var description: String?
+    
+    let repository = ExpensesRepository()
     
     init(view: NewExpenseViewProtocol) {
         self.view = view
@@ -50,13 +57,71 @@ extension NewExpensePresenter: NewExpensePresenterProtocol {
     }
     
     func createTapped(amount: Double, descripcion: String, quantity: Int) {
-        print(selectedAccount?.name ?? "")
-        print(selectedCategory?.name ?? "")
-        print(selectedProvider?.name ?? "")
-        print(amount)
-        print(descripcion)
-        print(quantity)
+        self.amount = amount
+        self.description = descripcion
+        self.quantity = quantity
+        
+        guard validateInputs() else { return }
+        
+        let newExpense = getNewExpense()
+        
+        repository.createExpense(newExpense: newExpense) { (successMsg, errorMsg) in
+            if errorMsg == nil {
+                self.view?.showSuccess(message: successMsg)
+            } else {
+                self.view?.showError(message: errorMsg)
+            }
+        }
+        
+   
     }
+    
+    func validateInputs() -> Bool {
+        
+        guard selectedAccount != nil else {
+            view?.showError(message: "Debe seleccionar una cuenta")
+            return false
+        }
+        
+        guard selectedCategory != nil else {
+            view?.showError(message: "Debe seleccionar una categoria")
+            return false
+        }
+        
+        guard selectedProvider != nil else {
+            view?.showError(message: "Debe seleccionar un proveedor")
+            return false
+        }
+        
+        guard let amount = amount, amount > 0.0 else {
+            view?.showError(message: "El monto no puede ser menor a 0")
+            return false
+        }
+        
+        guard let description = description, !description.isEmpty, description.count > 0 else {
+            view?.showError(message: "La descripcion no puede ser vacío")
+            return false
+        }
+        
+        guard let quantity = quantity, quantity > 0 else {
+            view?.showError(message: "La cantidad no puede ser menor a 0")
+            return false
+        }
+        
+        return true
+    }
+    
+    func getNewExpense() -> NewExpense {
+        let newExpense = NewExpense()
+        newExpense.amount = amount
+        newExpense.quantity = quantity
+        newExpense.description = description
+        newExpense.accountId = selectedAccount?.id
+        newExpense.categoryId = selectedAccount?.id
+        newExpense.providerId = selectedProvider?.id
+        return newExpense
+    }
+    
 }
 
 extension NewExpensePresenter : AccountSelectorDelegate {

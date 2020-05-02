@@ -15,6 +15,12 @@ protocol HomePresenterProtocol : class {
 
 class HomeViewController : UIViewController {
     
+    // OUTLETS
+    @IBOutlet weak var greetingLabel: UILabel?
+    @IBOutlet weak var monthlyExpensesLabel: UILabel?
+    @IBOutlet weak var newExpenseButton: UIButton?
+    @IBOutlet weak var expensesTable: UITableView!
+    
     var presenter: HomePresenterProtocol?
     
     override func viewDidLoad() {
@@ -25,6 +31,11 @@ class HomeViewController : UIViewController {
     private func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cerrar Sesión", style: .plain , target: self, action: #selector(closeSession))
         navigationItem.title = "Mis Gastos"
+        
+        newExpenseButton?.layer.cornerRadius = 8
+        
+        greetingLabel?.text = "¡Hola \(SessionHelper().getUser()!.name!)!"
+        
     }
     
     @objc private func closeSession() {
@@ -32,6 +43,12 @@ class HomeViewController : UIViewController {
         SessionHelper().closeSession()
         MainWireFrame.navigationToLoginOrHome(from: self)
     }
+    
+    // ACTIONS
+    @IBAction func newExpenseAction(_ sender: Any) {
+        NewExpenseWireFrame.navigateToNewExpense(from: self)
+    }
+    
     
 }
 

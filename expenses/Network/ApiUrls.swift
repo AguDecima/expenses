@@ -15,5 +15,6 @@ class ApiUrls {
     static let categories = "expenseCategories"
     static let providers = "providers"
     static let transactions = "transactions"
+    static let myExpenses = "transactions/myExpenses"
     
 }

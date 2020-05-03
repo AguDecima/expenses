@@ -24,4 +24,15 @@ class ExpensesRepository: BaseRepository {
             }
         }
     }
+    
+    func getExpenses(completion: @escaping (_ expenses: [Expense]?, _ errorMessage: String?) -> Void) {
+        requestBuilder.getMyExpenses().responseArray { (dataResponse: DataResponse<[Expense]>) in
+            switch dataResponse.result {
+                case .success:
+                    completion(dataResponse.value,nil)
+                case .failure:
+                    completion(nil,self.getError(from: dataResponse))
+            }
+        }
+    }
 }

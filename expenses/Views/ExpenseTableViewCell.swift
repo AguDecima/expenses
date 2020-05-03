@@ -10,15 +10,26 @@ import UIKit
 
 class ExpenseTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // OUTLETS
+    @IBOutlet weak var dateLabel: UILabel?
+    @IBOutlet weak var smallBoxLabel: UILabel?
+    @IBOutlet weak var amountLabel: UILabel?
+    @IBOutlet weak var providerLabel: UILabel?
+    
+    func setDateLabel(text: String) {
+        self.dateLabel?.text = text
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setSmallBoxLabel(text: String) {
+        self.smallBoxLabel?.text = text
+    }
+    
+    func setAmountLabel(text: String) {
+        self.amountLabel?.text = text
+    }
+    
+    func setProviderLabel(text: String) {
+        self.providerLabel?.text = text
     }
     
 }

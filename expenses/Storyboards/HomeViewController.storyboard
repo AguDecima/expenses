@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-9F-rqk">
-                                <rect key="frame" x="0.0" y="49" width="414" height="20.5"/>
+                                <rect key="frame" x="2" y="49" width="410" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saludo Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-xu-VEh">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="205" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gastos mensual " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-JO-hdQ">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="20.5"/>
+                                        <rect key="frame" x="205" y="0.0" width="205" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -54,9 +54,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rNT-If-tSp" firstAttribute="top" secondItem="1wo-9F-rqk" secondAttribute="bottom" constant="8.5" id="EpY-9e-u8j"/>
-                            <constraint firstItem="1wo-9F-rqk" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" id="PHm-G4-PLE"/>
+                            <constraint firstItem="1wo-9F-rqk" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="2" id="PHm-G4-PLE"/>
                             <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="rNT-If-tSp" secondAttribute="trailing" id="Wog-JC-clp"/>
-                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="1wo-9F-rqk" secondAttribute="trailing" id="ZfT-YZ-L2c"/>
+                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="1wo-9F-rqk" secondAttribute="trailing" constant="2" id="ZfT-YZ-L2c"/>
                             <constraint firstItem="1wo-9F-rqk" firstAttribute="top" secondItem="acN-bA-1Q0" secondAttribute="top" constant="5" id="aUg-yB-07c"/>
                             <constraint firstItem="9sk-1X-nUr" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="100" id="cPr-Qt-kSA"/>
                             <constraint firstItem="rNT-If-tSp" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" id="d2b-3w-BUQ"/>

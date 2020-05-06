@@ -29,7 +29,6 @@ class HomeViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
         expensesTable?.register(UINib(nibName: "ExpenseTableViewCell", bundle: .main), forCellReuseIdentifier: "cell");
         expensesTable?.dataSource = self
         expensesTable?.delegate = self
@@ -51,6 +50,17 @@ class HomeViewController : UIViewController {
         
         newExpenseButton?.layer.cornerRadius = 8
         greetingLabel?.text = "¡Hola \(SessionHelper().getUser()!.name!)!"
+        
+        greetingLabel?.numberOfLines = 1
+        greetingLabel?.minimumScaleFactor = 0.5
+        greetingLabel?.adjustsFontSizeToFitWidth = true
+        greetingLabel?.lineBreakMode = .byWordWrapping
+        
+        monthlyExpensesLabel?.numberOfLines = 1
+        monthlyExpensesLabel?.minimumScaleFactor = 0.5
+        monthlyExpensesLabel?.adjustsFontSizeToFitWidth = true
+        monthlyExpensesLabel?.lineBreakMode = .byWordWrapping
+        
     }
     
     @objc private func closeSession() {

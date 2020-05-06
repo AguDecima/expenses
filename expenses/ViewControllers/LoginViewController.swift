@@ -32,6 +32,9 @@ class LoginViewController: UIViewController {
         passwordLabel?.layer.cornerRadius = 8
         iniciarSesionButton?.layer.cornerRadius = 8
         
+        navigationController?.isNavigationBarHidden = true
+        
+        
     }
     
     //ACTIONS
@@ -52,6 +55,7 @@ extension LoginViewController : LoginViewControllerProtocol {
     
     func showLoginSuccess() {
         print("showLoginSuccess")
+        navigationController?.isNavigationBarHidden = false
         HomeWireFrame.navigateToHome(from: self)
     }
     

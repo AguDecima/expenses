@@ -14,6 +14,7 @@ class Category: Mappable {
     var id: Int?
     var name: String?
     var description: String?
+    var needsNumberOfItemsInExpenses: Bool?
     
     init() {}
     
@@ -23,6 +24,7 @@ class Category: Mappable {
         id <- map["id"]
         name <- map["name"]
         description <- map["description"]
+        needsNumberOfItemsInExpenses <- map["needsNumberOfItemsInExpenses"]
     }
 }
 

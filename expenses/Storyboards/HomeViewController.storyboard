@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,32 +15,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-9F-rqk">
-                                <rect key="frame" x="2" y="49" width="410" height="20.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1wo-9F-rqk">
+                                <rect key="frame" x="2" y="44" width="410" height="20"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saludo Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-xu-VEh">
-                                        <rect key="frame" x="0.0" y="0.0" width="205" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saludo Usuario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssu-xu-VEh">
+                                        <rect key="frame" x="0.0" y="0.0" width="195.66666666666666" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gastos mensual " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-JO-hdQ">
-                                        <rect key="frame" x="205" y="0.0" width="205" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gastos mensual " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-JO-hdQ">
+                                        <rect key="frame" x="195.66666666666663" y="0.0" width="214.33333333333337" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rNT-If-tSp">
-                                <rect key="frame" x="0.0" y="78" width="414" height="686"/>
+                                <rect key="frame" x="0.0" y="74" width="414" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-1X-nUr">
-                                <rect key="frame" x="100" y="772" width="215" height="45"/>
+                                <rect key="frame" x="100" y="792" width="214" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.79607843140000001" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="H5v-HJ-ztx"/>
+                                    <constraint firstAttribute="height" constant="45" id="asR-gb-Tir"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Nuevo gasto">
@@ -53,16 +53,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rNT-If-tSp" firstAttribute="top" secondItem="1wo-9F-rqk" secondAttribute="bottom" constant="8.5" id="EpY-9e-u8j"/>
-                            <constraint firstItem="1wo-9F-rqk" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="2" id="PHm-G4-PLE"/>
-                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="rNT-If-tSp" secondAttribute="trailing" id="Wog-JC-clp"/>
-                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="1wo-9F-rqk" secondAttribute="trailing" constant="2" id="ZfT-YZ-L2c"/>
-                            <constraint firstItem="1wo-9F-rqk" firstAttribute="top" secondItem="acN-bA-1Q0" secondAttribute="top" constant="5" id="aUg-yB-07c"/>
-                            <constraint firstItem="9sk-1X-nUr" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="100" id="cPr-Qt-kSA"/>
-                            <constraint firstItem="rNT-If-tSp" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" id="d2b-3w-BUQ"/>
-                            <constraint firstItem="9sk-1X-nUr" firstAttribute="top" secondItem="rNT-If-tSp" secondAttribute="bottom" constant="8" id="h95-k8-71Y"/>
-                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="9sk-1X-nUr" secondAttribute="trailing" constant="99" id="ttP-VY-whA"/>
-                            <constraint firstItem="9sk-1X-nUr" firstAttribute="top" secondItem="acN-bA-1Q0" secondAttribute="top" constant="728" id="tv8-AU-iJU"/>
+                            <constraint firstItem="rNT-If-tSp" firstAttribute="top" secondItem="1wo-9F-rqk" secondAttribute="bottom" constant="10" id="2Pn-DB-YUO"/>
+                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="rNT-If-tSp" secondAttribute="trailing" id="AWH-6H-Fg1"/>
+                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="1wo-9F-rqk" secondAttribute="trailing" constant="2" id="PP2-nS-YBN"/>
+                            <constraint firstItem="acN-bA-1Q0" firstAttribute="bottom" secondItem="rNT-If-tSp" secondAttribute="bottom" constant="80" id="VWg-4t-Any"/>
+                            <constraint firstItem="rNT-If-tSp" firstAttribute="top" secondItem="acN-bA-1Q0" secondAttribute="top" constant="30" id="a96-nm-GsX"/>
+                            <constraint firstItem="1wo-9F-rqk" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="2" id="aOH-2c-86Y"/>
+                            <constraint firstItem="rNT-If-tSp" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" id="aTs-Id-GWg"/>
+                            <constraint firstItem="9sk-1X-nUr" firstAttribute="top" secondItem="rNT-If-tSp" secondAttribute="bottom" constant="10" id="bQg-1U-HUD"/>
+                            <constraint firstItem="9sk-1X-nUr" firstAttribute="leading" secondItem="acN-bA-1Q0" secondAttribute="leading" constant="100" id="mG0-5R-dhn"/>
+                            <constraint firstItem="acN-bA-1Q0" firstAttribute="trailing" secondItem="9sk-1X-nUr" secondAttribute="trailing" constant="100" id="tMZ-vp-EW9"/>
+                            <constraint firstItem="1wo-9F-rqk" firstAttribute="top" secondItem="acN-bA-1Q0" secondAttribute="top" id="zLa-th-QtN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="acN-bA-1Q0"/>
                     </view>
@@ -75,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7q-j4-r5h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314.49275362318843" y="49.553571428571423"/>
+            <point key="canvasLocation" x="-316" y="49.025487256371818"/>
         </scene>
     </scenes>
 </document>

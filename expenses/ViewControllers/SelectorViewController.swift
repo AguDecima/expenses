@@ -28,6 +28,7 @@ class SelectorViewController: UIViewController {
         tableView?.register(UINib(nibName: "SelectorTableViewCell", bundle: .main), forCellReuseIdentifier: "cell");
         tableView?.dataSource = self
         tableView?.delegate = self
+        tableView?.rowHeight = 60
     }
     
     override func viewWillAppear(_ animated: Bool) {

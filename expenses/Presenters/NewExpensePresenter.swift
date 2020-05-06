@@ -18,6 +18,8 @@ protocol NewExpenseViewProtocol: class {
     func showSelected(provider: Provider)
     func showSuccess(message: String?)
     func showError(message: String?)
+    func hideQuantity(needsNumberOfItemsInExpenses: Bool)
+    func resetUI()
 }
 
 class NewExpensePresenter {
@@ -39,6 +41,7 @@ class NewExpensePresenter {
 }
 
 extension NewExpensePresenter: NewExpensePresenterProtocol {
+        
     
     func accountTapped() {
         view?.navigateToAccountSelector(delegate: self)
@@ -53,6 +56,7 @@ extension NewExpensePresenter: NewExpensePresenterProtocol {
             view?.navigateToProviderSelector(categoryId: categoryId, delegate: self)
         } else {
             print("no seleccionó categoria aun")
+            view?.showError(message: "No seleccionó una catregoria aun.")
         }
     }
     
@@ -68,6 +72,7 @@ extension NewExpensePresenter: NewExpensePresenterProtocol {
         repository.createExpense(newExpense: newExpense) { (successMsg, errorMsg) in
             if errorMsg == nil {
                 self.view?.showSuccess(message: successMsg)
+                self.view?.resetUI()
             } else {
                 self.view?.showError(message: errorMsg)
             }
@@ -103,10 +108,10 @@ extension NewExpensePresenter: NewExpensePresenterProtocol {
             return false
         }
         
-        guard let quantity = quantity, quantity > 0 else {
-            view?.showError(message: "La cantidad no puede ser menor a 0")
-            return false
-        }
+//        guard let quantity = quantity, quantity > 0 else {
+//            view?.showError(message: "La cantidad no puede ser menor a 0")
+//            return false
+//        }
         
         return true
     }
@@ -134,7 +139,9 @@ extension NewExpensePresenter : AccountSelectorDelegate {
 extension NewExpensePresenter : CategorySelectorDelegate {
     func categoryWasSelected(_ category: Category) {
         view?.showSelected(category: category)
+        view?.hideQuantity(needsNumberOfItemsInExpenses: category.needsNumberOfItemsInExpenses!)
         selectedCategory = category
+        
     }
 }
 

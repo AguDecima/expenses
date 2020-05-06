@@ -61,8 +61,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="amountLabel" destination="wEg-n8-QR8" id="k3N-di-8jW"/>
+                <outlet property="categoryLabel" destination="po5-BZ-h4G" id="BJr-9G-jEE"/>
                 <outlet property="dateLabel" destination="eei-vm-4NT" id="CCo-kO-XPX"/>
-                <outlet property="providerLabel" destination="po5-BZ-h4G" id="1Ai-wk-uyb"/>
                 <outlet property="smallBoxLabel" destination="Pf4-xB-Ina" id="bQx-Ty-Q9q"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>

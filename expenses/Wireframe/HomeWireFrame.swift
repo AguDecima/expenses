@@ -20,5 +20,16 @@ class HomeWireFrame {
         
         context.navigationController?.setViewControllers([homeVC], animated: true)
     }
+    
+    static func navigateToDetailExpense(from context: UIViewController, expense: Expense) {
+        let storyboard = UIStoryboard(name: "DetailExpenseViewController", bundle: .main)
+        let detailVC = storyboard.instantiateViewController(identifier: "DetailExpenseViewController") as DetailExpenseViewController
+        let detailPresenter = DetailExpensePresenter(view: detailVC)
+        
+        detailVC.presenter = detailPresenter
+        detailVC.expense = expense
+        
+        context.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 

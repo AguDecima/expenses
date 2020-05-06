@@ -14,7 +14,7 @@ class ExpenseTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel?
     @IBOutlet weak var smallBoxLabel: UILabel?
     @IBOutlet weak var amountLabel: UILabel?
-    @IBOutlet weak var providerLabel: UILabel?
+    @IBOutlet weak var categoryLabel: UILabel?
     
     func setDateLabel(text: String) {
         self.dateLabel?.text = text
@@ -28,8 +28,8 @@ class ExpenseTableViewCell: UITableViewCell {
         self.amountLabel?.text = text
     }
     
-    func setProviderLabel(text: String) {
-        self.providerLabel?.text = text
+    func setCategoryLabel(text: String) {
+        self.categoryLabel?.text = text
     }
     
 }

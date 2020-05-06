@@ -35,6 +35,9 @@
 		376952C32447D319006D7AE5 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376952C12447D319006D7AE5 /* LoginViewController.storyboard */; };
 		376952C52447D31B006D7AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376952C42447D31B006D7AE5 /* Assets.xcassets */; };
 		376952C82447D31B006D7AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376952C62447D31B006D7AE5 /* LaunchScreen.storyboard */; };
+		37922F602462026C000CE5A2 /* DetailExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37922F5F2462026C000CE5A2 /* DetailExpenseViewController.storyboard */; };
+		37922F6224620363000CE5A2 /* DetailExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37922F6124620363000CE5A2 /* DetailExpenseViewController.swift */; };
+		37922F64246204A9000CE5A2 /* DetailExpensePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37922F63246204A9000CE5A2 /* DetailExpensePresenter.swift */; };
 		379D09142457EF61008EDBA5 /* NewExpenseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */; };
 		379D09162457FDB7008EDBA5 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */; };
 		379D09182457FE0E008EDBA5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379D09172457FE0E008EDBA5 /* HomeViewController.swift */; };
@@ -93,6 +96,9 @@
 		376952C42447D31B006D7AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376952C72447D31B006D7AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376952C92447D31B006D7AE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37922F5F2462026C000CE5A2 /* DetailExpenseViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailExpenseViewController.storyboard; sourceTree = "<group>"; };
+		37922F6124620363000CE5A2 /* DetailExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpenseViewController.swift; sourceTree = "<group>"; };
+		37922F63246204A9000CE5A2 /* DetailExpensePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExpensePresenter.swift; sourceTree = "<group>"; };
 		379D09132457EF61008EDBA5 /* NewExpenseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewExpenseViewController.storyboard; sourceTree = "<group>"; };
 		379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		379D09172457FE0E008EDBA5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 				376952C12447D319006D7AE5 /* LoginViewController.storyboard */,
 				371C8AD024549DE30039329A /* SelectorViewController.storyboard */,
 				379D09152457FDB7008EDBA5 /* HomeViewController.storyboard */,
+				37922F5F2462026C000CE5A2 /* DetailExpenseViewController.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 				370938FF24512C47001942C0 /* NewExpenseViewController.swift */,
 				371C8AD224549E000039329A /* SelectorViewController.swift */,
 				379D09172457FE0E008EDBA5 /* HomeViewController.swift */,
+				37922F6124620363000CE5A2 /* DetailExpenseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +294,7 @@
 				37A7431B2454A1B8000AEE98 /* CategorySelectorPresenter.swift */,
 				37A7431D2454A1C9000AEE98 /* ProviderSelectorPresenter.swift */,
 				379D091B2458002A008EDBA5 /* HomePresenter.swift */,
+				37922F63246204A9000CE5A2 /* DetailExpensePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -372,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				371C8AD124549DE30039329A /* SelectorViewController.storyboard in Resources */,
+				37922F602462026C000CE5A2 /* DetailExpenseViewController.storyboard in Resources */,
 				376952C82447D31B006D7AE5 /* LaunchScreen.storyboard in Resources */,
 				379D09162457FDB7008EDBA5 /* HomeViewController.storyboard in Resources */,
 				371C8ACF24549DB10039329A /* SelectorTableViewCell.xib in Resources */,
@@ -451,6 +461,7 @@
 				37093908245134DC001942C0 /* NewExpensePresenter.swift in Sources */,
 				371C8AC32453CAE60039329A /* Provider.swift in Sources */,
 				37A7431E2454A1C9000AEE98 /* ProviderSelectorPresenter.swift in Sources */,
+				37922F6224620363000CE5A2 /* DetailExpenseViewController.swift in Sources */,
 				3709390624512FB7001942C0 /* SessionHelper.swift in Sources */,
 				379D091C2458002A008EDBA5 /* HomePresenter.swift in Sources */,
 				37C30274244A1AD200567703 /* ApiRequestBuilder.swift in Sources */,
@@ -460,6 +471,7 @@
 				37E6EB80244E7536004D6C1B /* MainViewController.swift in Sources */,
 				376952BC2447D319006D7AE5 /* AppDelegate.swift in Sources */,
 				371C8AC72453CEA60039329A /* CategoriesRepository.swift in Sources */,
+				37922F64246204A9000CE5A2 /* DetailExpensePresenter.swift in Sources */,
 				371C8AC52453CBBA0039329A /* AccountRepository.swift in Sources */,
 				371C8ABF2453C88F0039329A /* Currency.swift in Sources */,
 				379D091A2457FEF3008EDBA5 /* HomeWireFrame.swift in Sources */,

@@ -56,6 +56,8 @@ class NewExpenseViewController : UIViewController {
         let quantity: Int = Int(quantityTextField?.text ?? "") ?? 0
 
         presenter?.createTapped(amount: amount, descripcion: description, quantity: quantity)
+        
+    
     }
     
     private func setupUI(){
@@ -104,6 +106,16 @@ class NewExpenseViewController : UIViewController {
 
 extension NewExpenseViewController: NewExpenseViewProtocol {
     
+    func resetUI() {
+        self.accountLabel?.text = "Seleccione una cuenta"
+        self.categoryLabel?.text = "Seleccione una categoría"
+        self.providerLabel?.text = "Seleccione un proveedor"
+        self.quantityTextField?.text = ""
+        self.descriptionTextField?.text = ""
+        self.amountTextField?.text = ""
+    }
+    
+    
     func showSuccess(message: String?) {
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -141,5 +153,14 @@ extension NewExpenseViewController: NewExpenseViewProtocol {
     
     func showSelected(provider: Provider) {
         providerLabel?.text = "Provider: \(provider.name ?? "")"
+    }
+    
+    func hideQuantity(needsNumberOfItemsInExpenses: Bool) {
+        if(needsNumberOfItemsInExpenses) {
+            quantityTextField?.isHidden = false
+        }else{
+            quantityTextField?.isHidden = true
+        }
+        
     }
 }

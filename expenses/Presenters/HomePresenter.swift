@@ -8,8 +8,10 @@
 
 import Foundation
 
+
 protocol HomeViewProtocol : class {
     func show(expenses: [Expense])
+    func showModal(expense: Expense)
 }
 
 class HomePresenter {
@@ -25,17 +27,16 @@ class HomePresenter {
 }
 
 extension HomePresenter : HomePresenterProtocol {
+    
     func fetchData() {
         repository.getExpenses { (expenses, error) in
             self.expenses = expenses ?? []
             self.view?.show(expenses: expenses ?? [])
-            print(self.expenses)
         }
     }
     
     func elementSelected(at index: Int) {
-        
+        self.view?.showModal(expense: expenses[index])
     }
-    
     
 }

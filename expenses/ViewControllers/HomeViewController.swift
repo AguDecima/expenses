@@ -125,9 +125,8 @@ extension HomeViewController : HomeViewProtocol {
         self.expenses = expenses
         
         var total : Double = 0.0
-        _ = expenses.map { (expense) -> Double in
+        _ = expenses.map { (expense) in
             total += expense.amount!
-            return expense.amount!
         }
         
         self.monthlyExpensesLabel?.text = "Gastos este més: $\(String(format: "%.2f", total)) (Caja chica)"

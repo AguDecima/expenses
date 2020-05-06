@@ -45,6 +45,7 @@ class HomeViewController : UIViewController {
     }
     
     private func setupUI() {
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Cerrar Sesión", style: .plain , target: self, action: #selector(closeSession))
         navigationItem.title = "Mis Gastos"
         
@@ -54,8 +55,21 @@ class HomeViewController : UIViewController {
     
     @objc private func closeSession() {
         print("Cerrando Session")
-        SessionHelper().closeSession()
-        MainWireFrame.navigationToLoginOrHome(from: self)
+        let refreshAlert = UIAlertController(title: "Cerrar Sesíon", message: "Esta seguro de salir ? 😱", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Si", style: .default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+            SessionHelper().closeSession()
+            MainWireFrame.navigationToLoginOrHome(from: self)
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+            
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+        
     }
     
     // ACTIONS
